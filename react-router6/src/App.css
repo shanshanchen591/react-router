@@ -19,9 +19,9 @@ body {
     color: "white"
 }
 
-.content-container {
+.content-container{
     margin: 24px 16px;
     padding: 24;
     min-height: 280;
-    color: "black"
+    color: black
 }

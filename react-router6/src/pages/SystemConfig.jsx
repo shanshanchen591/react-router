@@ -4,7 +4,7 @@ import { Outlet } from "react-router"
 const SystemConfig = ()=>{
     return(
         <div>
-            SystemConfig Page
+            Config Page
             <Outlet/>
         </div>
     )
