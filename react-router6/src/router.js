@@ -3,6 +3,8 @@ import App from "./App";
 import Dashboard from "./pages/Dashboard";
 import SystemConfig from "./pages/SystemConfig";
 import User from "./pages/User";
+import Alarm from "./pages/Alarm";
+import History from "./pages/History";
 
 const router = createHashRouter([
     {
@@ -13,8 +15,7 @@ const router = createHashRouter([
                 path: "/",
                 index: true,
                 element: <Dashboard />,
-            },
-            {
+            },{
                 path: "/system",
                 element: <SystemConfig />,
                 children: [
@@ -23,6 +24,12 @@ const router = createHashRouter([
                         element: <User />,
                     }
                 ]
+            },{
+                path: "/alarm",
+                element: <Alarm />,
+            },{
+                path: "/history",
+                element: <History />,
             }
         ]
     },

@@ -7,7 +7,8 @@ import {
   UserOutlined,
   SettingOutlined,
   MenuUnfoldOutlined,
-  MenuFoldOutlined
+  MenuFoldOutlined,
+  WarningOutlined
 } from '@ant-design/icons';
 import darkTheme from './theme';
 import "./App.css"
@@ -27,6 +28,14 @@ const items = [{
     icon: <UserOutlined />,
     label: "User",
   }]
+},{
+  key: "/alarm",
+  icon: <WarningOutlined />,
+  label: "Alarm"
+},{
+  key: "/history",
+  icon: <HomeOutlined />,
+  label: "history"
 }
 ];
 function App() {
@@ -45,15 +54,10 @@ function App() {
     <Layout className="layout-container">
       <Header style={{ padding: 0}}>
         <Button
+          className='collapsed-button'
           type="text"
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           onClick={() => setCollapsed(!collapsed)}
-          style={{
-            fontSize: '16px',
-            width: 64,
-            height: 64,
-            color: "white"
-          }}
         />
         React Router V6 + Antd
       </Header>
@@ -66,12 +70,10 @@ function App() {
             onClick={clickMenuItem} />
         </Sider>
         <Content style={{
-            margin: '24px 16px',
-            padding: 24,
-            minHeight: 280,
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
-          }}> 
+          }}
+          className='content-container'> 
           <Outlet />
         </Content>
       </Layout>

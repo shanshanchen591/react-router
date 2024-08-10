@@ -1,11 +1,27 @@
-html,body{
+html,
+body {
     height: 100%;
     margin: 0px;
 }
-#root{
+
+#root {
     height: 100%
 }
 
-.layout-container{
+.layout-container {
     height: 100%;
+}
+
+.collapsed-button {
+    font-size: 16px;
+    width: 64;
+    height: 64;
+    color: "white"
+}
+
+.content-container {
+    margin: 24px 16px;
+    padding: 24;
+    min-height: 280;
+    color: "black"
 }
