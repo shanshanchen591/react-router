@@ -1,0 +1,11 @@
+html,body{
+    height: 100%;
+    margin: 0px;
+}
+#root{
+    height: 100%
+}
+
+.layout-container{
+    height: 100%;
+}
